@@ -1,0 +1,69 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Question2/04d4208c95617a19cea5d2ed6187b3d1cb50b7adbebb3d6073891a2caf758adb.mp4",
+      "rev_file": "slides/files/Question2/04d4208c95617a19cea5d2ed6187b3d1cb50b7adbebb3d6073891a2caf758adb_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Question2/ef7d230b2e3e959bbce67355566d684d25e6e9eed77abc78c02df1237eaaf4bc.mp4",
+      "rev_file": "slides/files/Question2/ef7d230b2e3e959bbce67355566d684d25e6e9eed77abc78c02df1237eaaf4bc_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Question2/0b4b21f2d3108ff2e97a862a192fcb10435f434c98b1c7800fe4f352f225377f.mp4",
+      "rev_file": "slides/files/Question2/0b4b21f2d3108ff2e97a862a192fcb10435f434c98b1c7800fe4f352f225377f_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Question2/c6b3520191a960b9cca13cb997941113dbcd2029a6b04f55cf3bef70260c321c.mp4",
+      "rev_file": "slides/files/Question2/c6b3520191a960b9cca13cb997941113dbcd2029a6b04f55cf3bef70260c321c_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Question2/f6367f988c926d90ea5aad29c76770cc844fb8908fb0a21752b32e36ebf0aeb7.mp4",
+      "rev_file": "slides/files/Question2/f6367f988c926d90ea5aad29c76770cc844fb8908fb0a21752b32e36ebf0aeb7_reversed.mp4"
+    },
+    {
+      "loop": true,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/Question2/8e2043c1f94551b43aeda3ae47d03d600cfc62fc698edb6a5e2e76ee15190d71.mp4",
+      "rev_file": "slides/files/Question2/8e2043c1f94551b43aeda3ae47d03d600cfc62fc698edb6a5e2e76ee15190d71_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    854,
+    480
+  ],
+  "background_color": "black"
+}

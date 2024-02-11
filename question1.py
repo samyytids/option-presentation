@@ -3,6 +3,31 @@ from manim_slides.slide import Slide
 from functions import * 
 import functools
 import math as maths
+import sympy as sp
+
+def gradient_of_function(f):
+    x = sp.Symbol('x')
+    y = f(x)
+
+    # Differentiate y with respect to x
+    dy_dx = sp.diff(y, x)
+
+    # Define a function that returns the gradient at a given point
+    gradient_func = sp.lambdify(x, dy_dx, 'numpy')
+
+    return gradient_func
+
+def create_arrow_animations(x_range: tuple[int,int], partial_function: functools.partial) -> list[Succession]:
+    gradients_changes = set()
+    x = x_range[0]
+    gradient = gradient_of_function(partial_function)
+    print(gradient)
+    while x < x_range[1]:
+        print(gradient(x))
+        if gradient(x) not in gradients_changes:
+            gradients_changes.add(x)
+        x += 0.1
+    return gradients_changes
 
 class CustomScene(Slide):
     def create_graphs(self, graphs):
@@ -80,6 +105,8 @@ class Question2(CustomScene):
         plots = [axes[idx].plot(lambda_function, color=RED) for idx, lambda_function in enumerate(component_lambdas)]
 
         [self.play(Create(plot), Create(axes[idx])) for idx, plot in enumerate(plots)]
+        
+        
 
         for idx, plot in enumerate(plots):
             self.next_slide()
@@ -92,3 +119,35 @@ class Question2(CustomScene):
             else:
                 g2 = final_axis.plot(combined_lambdas[idx], color=RED)
                 self.play(Transform(g, g2))        
+        
+        underlying_price = -10
+        start_x = underlying_price
+        start_y = combined_lambdas[-1](underlying_price=underlying_price)
+        end_y = start_y
+        while start_y == end_y:
+            underlying_price += 0.1
+            end_y = combined_lambdas[-1](underlying_price=underlying_price)
+            end_x = underlying_price
+            
+        start_position = final_axis.coords_to_point(start_x, start_y)
+        end_position = final_axis.coords_to_point(end_x, end_y)
+        movement = end_position - start_position
+        
+        start = [start_position[0], start_position[1]-2, start_position[2]+2]
+        end = [start_position[0], start_position[1]-0.15, start_position[2]+2]
+        
+        arrow = Arrow(start=start, end=end, color=WHITE, stroke_width=3)
+        self.play(Create(arrow))
+        
+        right = movement
+        move_right = Transform(arrow, arrow.copy().shift(right))
+        move_left = Transform(arrow, arrow.copy())
+        
+        loop_animation = Succession(move_right, move_left)
+        self.next_slide(loop=True)
+        self.play(loop_animation, run_time=2)
+        
+        
+        positions = create_arrow_animations((-10, 10), combined_lambdas[-1])
+        print(positions)
+        
